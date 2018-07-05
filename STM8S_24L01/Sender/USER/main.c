@@ -87,9 +87,10 @@ void main(void)
     char data;
     uchar TxBuf[TX_PLOAD_WIDTH]={0x01,0x01,0x01,0x01,0x01};
 
-    //初始�?    CLK_HSIPrescalerConfig(CLK_PRESCALER_HSIDIV1); //16MHz高速内部RC振荡�?HSI)
+    CLK_HSIPrescalerConfig(CLK_PRESCALER_HSIDIV1); 
 
-    // 1.串口初始�?    /* UART1 configuration -------------------------------------------------------*/
+    // 1.串口初始串口  
+     /* UART1 configuration -------------------------------------------------------*/
     /* UART1 configured as follow:
            - Word Length = 8 Bits
            - 1 Stop Bit
@@ -112,15 +113,15 @@ void main(void)
 
     printf("\n\r串口初始化完成\n\r");
 
-    // 2.STM8�?4L01连接的IO口初始化
-    //MISO 读取数据  浮动输入，没有外部中�?    GPIO_Init(NRF24L01_CE_PORT, (GPIO_Pin_TypeDef)(NRF24L01_CE_PIN ), GPIO_MODE_OUT_PP_HIGH_FAST);//ce
+    // 2.STM8和NRF24L01连接的IO口初始化 
+    GPIO_Init(NRF24L01_CE_PORT, (GPIO_Pin_TypeDef)(NRF24L01_CE_PIN ), GPIO_MODE_OUT_PP_HIGH_FAST);//ce
     GPIO_Init(NRF24L01_CS_PORT, (GPIO_Pin_TypeDef)(NRF24L01_CS_PIN ), GPIO_MODE_OUT_PP_HIGH_FAST);//cs
     GPIO_Init(NRF24L01_SCK_PORT, (GPIO_Pin_TypeDef)(NRF24L01_SCK_PIN ), GPIO_MODE_OUT_PP_HIGH_FAST);//sck
     GPIO_Init(NRF24L01_MOSI_PORT, (GPIO_Pin_TypeDef)(NRF24L01_MOSI_PIN ), GPIO_MODE_OUT_PP_HIGH_FAST);//MOSI
     GPIO_Init(NRF24L01_MISO_PORT, (GPIO_Pin_TypeDef)(NRF24L01_MISO_PIN), GPIO_MODE_IN_FL_NO_IT);//MISO
     GPIO_Init(NRF24L01_IRQ_PORT, (GPIO_Pin_TypeDef)(NRF24L01_IRQ_PIN ), GPIO_MODE_IN_FL_NO_IT); //IRQ
 
-    // 3.STM8�?4L01连接，STM8为主模式
+    // 3.STM8和NRF24L01连接，STM8为主模式
     SPI_DeInit();
     /* Initialize SPI in Slave mode  */
     SPI_Init(SPI_FIRSTBIT_MSB, SPI_BAUDRATEPRESCALER_2, SPI_MODE_MASTER, SPI_CLOCKPOLARITY_LOW,
@@ -141,7 +142,7 @@ void main(void)
 
     Delay_MS(500);
 
-    printf("\n\r正在检�?4L01设备\n\r");
+    printf("\n\r正在检测NRF24L01设备\n\r");
 
     if(NRF24L01_Check()==0)
     {
@@ -150,7 +151,7 @@ void main(void)
     }
     else
     {
-        printf("\n\r>>>请检查设备是否安装正�?<<\n\r");
+        printf("\n\r>>>请检查设备是否安装正确<<\n\r");
     }
     printf("\n\r请输入命令：\n\r");
     while(1)
@@ -166,7 +167,7 @@ void main(void)
             GPIO_WriteLow(GPIOD, GPIO_PIN_0);
             GPIO_WriteLow(GPIOD, GPIO_PIN_2);
             GPIO_WriteLow(GPIOD, GPIO_PIN_3);
-            printf("\n 发送成�?\n\r");
+            printf("\n 发送成功\n\r");
             Delay_MS(200);
         }
         else
