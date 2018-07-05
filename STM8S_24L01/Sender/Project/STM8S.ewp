@@ -1634,19 +1634,13 @@
   <group>
     <name>USER</name>
     <file>
-      <name>$PROJ_DIR$\..\USER\dht11.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\USER\dht11.h</name>
-    </file>
-    <file>
       <name>$PROJ_DIR$\..\USER\main.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\USER\STM8_LCD.c</name>
+      <name>$PROJ_DIR$\..\USER\nRF24L01.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\USER\STM8_LCD.h</name>
+      <name>$PROJ_DIR$\..\USER\nRF24L01.h</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\USER\stm8s_conf.h</name>

@@ -12,7 +12,7 @@
           
           
           
-        <Column0>322</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+        <Column0>169</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
       </Workspace>
       <Build>
         
@@ -24,7 +24,7 @@
     <Windows>
       
       
-    <Wnd0>
+    <Wnd2>
         <Tabs>
           <Tab>
             <Identity>TabID-2783-20607</Identity>
@@ -36,7 +36,7 @@
           </Tab>
         </Tabs>
         
-      <SelectedTab>0</SelectedTab></Wnd0><Wnd1>
+      <SelectedTab>0</SelectedTab></Wnd2><Wnd3>
         <Tabs>
           <Tab>
             <Identity>TabID-23757-20623</Identity>
@@ -46,20 +46,20 @@
           </Tab>
         <Tab><Identity>TabID-12228-7089</Identity><TabName>Debug Log</TabName><Factory>Debug-Log</Factory><Session/></Tab><Tab><Identity>TabID-20990-11223</Identity><TabName>Find in Files</TabName><Factory>Find-in-Files</Factory><Session/></Tab></Tabs>
         
-      <SelectedTab>0</SelectedTab></Wnd1></Windows>
+      <SelectedTab>1</SelectedTab></Wnd3></Windows>
     <Editor>
       
       
       
       
-    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\FWLIB\inc\stm8s.h</Filename><XPos>0</XPos><YPos>212</YPos><SelStart>9487</SelStart><SelEnd>9492</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\FWLIB\inc\stm8s_gpio.h</Filename><XPos>0</XPos><YPos>62</YPos><SelStart>3735</SelStart><SelEnd>3745</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\FWLIB\src\stm8s_gpio.c</Filename><XPos>0</XPos><YPos>213</YPos><SelStart>8023</SelStart><SelEnd>8023</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\USER\STM8_LCD.c</Filename><XPos>0</XPos><YPos>315</YPos><SelStart>9312</SelStart><SelEnd>9312</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\USER\STM8_LCD.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>1202</SelStart><SelEnd>1202</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\FWLIB\src\stm8s_itc.c</Filename><XPos>0</XPos><YPos>256</YPos><SelStart>2441</SelStart><SelEnd>2441</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\USER\dht11.c</Filename><XPos>0</XPos><YPos>111</YPos><SelStart>1139</SelStart><SelEnd>1139</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\USER\dht11.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>40</SelStart><SelEnd>59</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\USER\main.c</Filename><XPos>0</XPos><YPos>27</YPos><SelStart>1299</SelStart><SelEnd>1299</SelEnd></Tab><ActiveTab>8</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\USER\esp8266.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>146</SelStart><SelEnd>146</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\USER\esp8266.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>91</SelStart><SelEnd>91</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\USER\stm8s_it.c</Filename><XPos>0</XPos><YPos>321</YPos><SelStart>9338</SelStart><SelEnd>9338</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\FWLIB\inc\stm8s_uart1.h</Filename><XPos>0</XPos><YPos>159</YPos><SelStart>1061</SelStart><SelEnd>1061</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\FWLIB\src\stm8s_uart1.c</Filename><XPos>0</XPos><YPos>768</YPos><SelStart>17854</SelStart><SelEnd>17854</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\FWLIB\inc\stm8s_i2c.h</Filename><XPos>0</XPos><YPos>84</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\USER\stm8s_it.h</Filename><XPos>0</XPos><YPos>21</YPos><SelStart>4931</SelStart><SelEnd>4931</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\Program Files (x86)\IAR Systems\Embedded Workbench 6.0 Evaluation\stm8\inc\c\intrinsics.h</Filename><XPos>0</XPos><YPos>24</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\USER\stm8s_conf.h</Filename><XPos>0</XPos><YPos>48</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\FWLIB\inc\stm8s.h</Filename><XPos>0</XPos><YPos>212</YPos><SelStart>9487</SelStart><SelEnd>9492</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\FWLIB\inc\stm8s_gpio.h</Filename><XPos>0</XPos><YPos>62</YPos><SelStart>3735</SelStart><SelEnd>3745</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\FWLIB\src\stm8s_gpio.c</Filename><XPos>0</XPos><YPos>213</YPos><SelStart>8023</SelStart><SelEnd>8023</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\FWLIB\src\stm8s_itc.c</Filename><XPos>0</XPos><YPos>38</YPos><SelStart>2302</SelStart><SelEnd>2302</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\USER\main.c</Filename><XPos>0</XPos><YPos>108</YPos><SelStart>5252</SelStart><SelEnd>5252</SelEnd></Tab><ActiveTab>4</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\USER\stm8s_it.c</Filename><XPos>0</XPos><YPos>321</YPos><SelStart>9338</SelStart><SelEnd>9338</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\FWLIB\inc\stm8s_uart1.h</Filename><XPos>0</XPos><YPos>159</YPos><SelStart>1061</SelStart><SelEnd>1061</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\FWLIB\src\stm8s_uart1.c</Filename><XPos>0</XPos><YPos>768</YPos><SelStart>17854</SelStart><SelEnd>17854</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\FWLIB\inc\stm8s_i2c.h</Filename><XPos>0</XPos><YPos>99</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\USER\stm8s_it.h</Filename><XPos>0</XPos><YPos>21</YPos><SelStart>4931</SelStart><SelEnd>4931</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\Program Files (x86)\IAR Systems\Embedded Workbench 6.0 Evaluation\stm8\inc\c\intrinsics.h</Filename><XPos>0</XPos><YPos>24</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\USER\stm8s_conf.h</Filename><XPos>0</XPos><YPos>48</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
     <Positions>
       
       
       
       
       
-    <Top><Row0><Sizes><Toolbar-00500148><key>iaridepm.enu1</key></Toolbar-00500148></Sizes></Row0><Row1><Sizes/></Row1></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>667</Bottom><Right>396</Right><x>-2</x><y>-2</y><xscreen>491</xscreen><yscreen>574</yscreen><sizeHorzCX>255729</sizeHorzCX><sizeHorzCY>575150</sizeHorzCY><sizeVertCX>207292</sizeVertCX><sizeVertCY>670341</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>286</Bottom><Right>1922</Right><x>-2</x><y>-2</y><xscreen>1924</xscreen><yscreen>288</yscreen><sizeHorzCX>1002083</sizeHorzCX><sizeHorzCY>288577</sizeHorzCY><sizeVertCX>255729</sizeVertCX><sizeVertCY>575150</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+    <Top><Row0><Sizes><Toolbar-01131378><key>iaridepm.enu1</key></Toolbar-01131378></Sizes></Row0></Top><Left><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>611</Bottom><Right>243</Right><x>-2</x><y>-2</y><xscreen>303</xscreen><yscreen>326</yscreen><sizeHorzCX>189375</sizeHorzCX><sizeHorzCY>398533</sizeHorzCY><sizeVertCX>153125</sizeVertCX><sizeVertCY>749389</sizeVertCY></Rect></Wnd2></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>162</Bottom><Right>1602</Right><x>-2</x><y>-2</y><xscreen>1604</xscreen><yscreen>164</yscreen><sizeHorzCX>1002500</sizeHorzCX><sizeHorzCY>200489</sizeHorzCY><sizeVertCX>189375</sizeVertCX><sizeVertCY>398533</sizeVertCY></Rect></Wnd3></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
   </Desktop>
 </Workspace>
 
