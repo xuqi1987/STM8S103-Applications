@@ -221,33 +221,27 @@ Function: nRF24L01_TxPacket();
 unsigned char nRF24L01_TxPacket(unsigned char * tx_buf)
 {
 
-    //NRF24L01_CE_LOW();
-    SPI_Write_Buf(WRITE_REG + TX_ADDR, TX_ADDRESS, TX_ADR_WIDTH);    //
-    SPI_Write_Buf(WRITE_REG + RX_ADDR_P0, TX_ADDRESS, TX_ADR_WIDTH);
+    SPI_Write_Buf(WRITE_REG + TX_ADDR, TX_ADDRESS, TX_ADR_WIDTH);    // 1.写TX的地址
+    SPI_Write_Buf(WRITE_REG + RX_ADDR_P0, TX_ADDRESS, TX_ADR_WIDTH);  // 2.写Rx的地址，使Auto_ack使能
 
-    SPI_RW_Reg(WRITE_REG + EN_AA, 0x01);//0x01);      //  频道0自动	ACK应答允许
-    SPI_RW_Reg(WRITE_REG + EN_RXADDR, 0x01);  //  允许接收地址只有频道0，如果需要多频道可以参考Page21
-    //SPI_RW_Reg(WRITE_REG + SETUP_RETR, 0x1a); // 设置自动重发时间和次数：500us + 86us, 10 retrans...
-    SPI_RW_Reg(WRITE_REG + RF_CH, 40);        //   设置信道工作为2.4GHZ，收发必须一致
-
-    SPI_RW_Reg(WRITE_REG + RF_SETUP, 0x07);  //设置发射速率为1MHZ，发射功率为最大值0dB
+    SPI_RW_Reg(WRITE_REG + EN_AA, 0x01);//0x01);      //  3.频道0自动	使能ACK应答允许
+    SPI_RW_Reg(WRITE_REG + EN_RXADDR, 0x01);  //  4.允许接收地址只有频道0，如果需要多频道可以参考Page21
+    SPI_RW_Reg(WRITE_REG + SETUP_RETR, 0x1a); // 5.设置自动重发时间和次数：500us + 86us, 10 retrans...
+    SPI_RW_Reg(WRITE_REG + RF_CH, 40);        // 6.设置信道工作为2.4GHZ，收发必须一致
+    SPI_RW_Reg(WRITE_REG + RF_SETUP, 0x07);  // 7.设置发射速率为1MHZ，发射功率为最大值0dB
 
     GPIO_WriteLow(NRF24L01_CE_PORT,NRF24L01_CE_PIN);
 
-    SPI_Write_Buf(WR_TX_PLOAD, tx_buf, TX_PLOAD_WIDTH);
-    SPI_RW_Reg(WRITE_REG + CONFIG, 0x0E);//0x0E;
+    SPI_Write_Buf(WR_TX_PLOAD, tx_buf, TX_PLOAD_WIDTH); // 8.选择通道0有效数据宽度
+    SPI_RW_Reg(WRITE_REG + CONFIG, 0x0E);//0x0E;    // 9. 配置基本参数及切换工作模式
 
-    GPIO_WriteHigh(NRF24L01_CE_PORT,NRF24L01_CE_PIN);
-
+    GPIO_WriteHigh(NRF24L01_CE_PORT,NRF24L01_CE_PIN); // CE使能10us，发送数据
     inerDelay_us(35);		//延时10us
-
     GPIO_WriteLow(NRF24L01_CE_PORT,NRF24L01_CE_PIN);
-
-    //////////////////////////////////////////////NRF24L01_IRQ!=0
 
     while(GPIO_ReadInputPin(NRF24L01_IRQ_PORT, NRF24L01_IRQ_PIN)!=0);//等待发送中断
-    stat=SPI_Read(STATUS);//读取状态寄存器的值
-    SPI_RW_Reg(WRITE_REG+STATUS,stat); //清除TX_DS或MAX_RT中断标志
+    stat = SPI_Read(STATUS);//读取状态寄存器的值
+    SPI_RW_Reg(WRITE_REG+STATUS, stat); //清除TX_DS或MAX_RT中断标志
     if(stat&MAX_TX)//达到最大重发次数
     {
         SPI_RW_Reg(FLUSH_TX,0xff);//清除TX FIFO寄存器

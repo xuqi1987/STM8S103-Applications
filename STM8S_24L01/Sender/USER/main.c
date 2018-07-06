@@ -132,11 +132,12 @@ void main(void)
 
     printf("\n\rSPI设置完成\n\r");
 
+    // 4.24L01模块的CE=0,CS=1,SCK=0,IRQ=1初始化， CE待机，CS SPI禁止，SCK SPI时钟置低，IRQ中断复位
 
-    // 4.24L01模块的CE,CS,SCK
-    GPIO_WriteHigh(NRF24L01_CE_PORT, NRF24L01_CE_PIN);
-    GPIO_WriteHigh(NRF24L01_CS_PORT, NRF24L01_CS_PIN);
-    GPIO_WriteLow(NRF24L01_SCK_PORT, NRF24L01_SCK_PIN);
+    GPIO_WriteLow(NRF24L01_CE_PORT, NRF24L01_CE_PIN);   // CE待机
+    GPIO_WriteHigh(NRF24L01_CS_PORT, NRF24L01_CS_PIN);  // SPI禁止
+    GPIO_WriteLow(NRF24L01_SCK_PORT, NRF24L01_SCK_PIN); // SPI时钟置低
+    GPIO_WriteHigh(NRF24L01_IRQ_PORT, NRF24L01_IRQ_PIN);    // IRQ中断复位
 
     printf("\n\r24L01模块的CE,CS,SCK初始化完成\n\r");
 
